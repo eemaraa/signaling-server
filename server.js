@@ -1,5 +1,5 @@
 const WebSocket = require('ws');
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT;
 const wss = new WebSocket.Server({ port: PORT });
 
 wss.on('connection', function connection(ws) {
@@ -13,4 +13,4 @@ wss.on('connection', function connection(ws) {
   });
 });
 
-console.log('WebSocket server is running on port', PORT); 
+console.log('WebSocket server is running on port', PORT);
